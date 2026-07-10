@@ -1,25 +1,27 @@
- /*        Given an array of integers, find the maximum value present in it.
-  Example: Input: arr = [3, 2, 1, 5, 2]
-           Output: 5
 
+             //    CODE
 
-      LOGIC:--->> If we arrange all elements in ascending order, the biggest one must land at the final index, by the very definition of “sorted”.
-                 This trades a full sort for a trivially simple lookup at the end.
+     // METHOD 1 -->> SORTING  
+      
 
-      ALGORITHM: -->>  1. Sort the array in non-decreasing order.
-                       2. Return the element sitting at index n-1 (the last position).
-
-
-
-           */
-             //CODE 
-     int largestElement_sortMethod(vector<int>& arr) {
+             int largestElement_sortMethod(vector<int>& arr) {
                      sort(arr.begin(), arr.end());                         // rearrange ascending
                       return arr[arr.size() - 1];                         // last position holds the max
                       }
 
-   // complexity analysis -->>
-   /* 
-           T.C -->> O(N log N) + O(1) ... i.e O(N log N)
-           S.C -->> O(log N) auxiliary (recursion stack) — commonly rounded to O(1) in interviews
-   */
+   // METHOD 2 -->> Compare Every Element Against Every Other Element
+
+             int largestElement_compareAllMethod(vector<int>& arr) {
+                 int n = arr.size();
+                 for (int i = 0; i < n; i++) {
+                      bool isLargest = true;
+                    for (int j = 0; j < n; j++) {
+                       if (arr[j] > arr[i]) {                        // someone beats this candidate
+                          isLargest = false;
+                                break;
+                              }
+                            }  
+                       if (isLargest) return arr[i];              // survived every comparison
+                        }
+                         return -1;                              // unreachable for non-empty arrays
+                      }
