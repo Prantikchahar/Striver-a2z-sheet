@@ -43,7 +43,7 @@ sort for a trivially simple lookup at the end.
 
 ### Code
 
-`brute.cpp`
+[brute.cpp](./brute.cpp)
 
 ### Complexity
 
@@ -71,7 +71,7 @@ entire rest of the array and check whether anything beats it. The first candidat
 
 ### Code
 
-`brute.cpp`
+[brute.cpp](./brute.cpp)`
 
 ### Complexity
 
@@ -108,7 +108,7 @@ everyone the current best has already beaten. This collapses O(N2) comparisons d
 
 ### Code
 
-`optimal.cpp`
+[optimal.cpp](./optimal.cpp)`
 
 ### Complexity
 
