@@ -1,0 +1,16 @@
+# Object files
+*.o
+
+#Executable files created by Geany/g++
+brute
+better
+optimal
+
+#Swap files
+*.swp
+
+#Backup files
+*~
+
+#Core dump files
+core
