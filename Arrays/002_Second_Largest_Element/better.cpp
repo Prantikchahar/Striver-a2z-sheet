@@ -17,6 +17,6 @@ int secondlargestelement_better(vector<int> arr){
 
 int main(){
     vector<int> arr = {2,5,7,8,8,1,4};
-    cout<<"The second largest element using brute force method : "<<secondlargestelement_better(arr)<<endl;
+    cout<<"The second largest element using better approach : "<<secondlargestelement_better(arr)<<endl;
     return 0;
 }
